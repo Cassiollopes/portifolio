@@ -1,101 +1,224 @@
+import { DotPattern } from "@/components/magicui/dot-pattern";
+import { HyperText } from "@/components/magicui/hyper-text";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
+import {
+  BsFileEarmarkTextFill,
+  BsGithub,
+  BsLinkedin,
+} from "react-icons/bs";
+import {
+  FaArrowRightLong,
+  FaNodeJs,
+} from "react-icons/fa6";
+import { FiArrowUpRight } from "react-icons/fi";
+import { LuBox } from "react-icons/lu";
+import { SiJest, SiSequelize } from "react-icons/si";
+
+const links = [
+  {
+    icon: <BsLinkedin />,
+    link: "https://www.linkedin.com/in/c%C3%A1ssio-eduardo-a3b7012a8/",
+    name: "Linkedin",
+  },
+  {
+    icon: <BsGithub />,
+    link: "https://github.com/Cassiollopes",
+    name: "Github",
+  },
+  {
+    icon: <BsFileEarmarkTextFill />,
+    link: "https://cassiomartins.github.io/",
+    name: "Curriculo",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div
+      className="text-white bg-black/95
+    flex uppercase items-center justify-start flex-col gap-4 min-h-screen font-[family-name:var(--font-geist-sans)] overflow-hidden"
+    >
+      <div className="bg-gradient-to-t from-transparent to-slate-800 flex to-90% flex-col gap-6 h-[80vh] max-md:h-[50vh] justify-center w-full md:items-center px-4">
+        <div className="md:text-center flex flex-col gap-2 max-md:gap-4 font-bold ">
+          <p className="text-xl opacity-60 font-black">Ola 👋 eu sou Cassio</p>
+          <p className="text-9xl leading-[0.85] md:text-center max-md:text-5xl">
+            React <br />
+            Developer
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <p className="text-sm text-center max-md:text-left max-md:font-semibold">
+          Tenho 19 anos e sou estudante de programação, procuro minha primeira
+          <br className="max-md:hidden" /> oportunidade de emprego na área de
+          desenvolvimento de software.
+        </p>
+        <div className="flex gap-2 items-center justify-center">
+          {links.map((link, i) => (
+            <Link
+              key={i}
+              href={link.link}
+              target="_blank"
+              className=" lowercase gap-1 p-2 px-4 border rounded-lg text-white/50 hover:text-white transition-all duration-300 ease-in-out flex items-center bg-white/[0.01] hover:bg-white/10"
+            >
+              <div>{link.icon}</div>
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col text-2xl font-bold items-center w-full gap-12 relative">
+        <DotPattern
+          className={cn(
+            "[mask-image:radial-gradient(600_circle_at_center,white,transparent)] opacity-10"
+          )}
+        />
+        <div className="flex flex-col gap-10 max-w-[1200px] items-center">
+          <div className="w-fit md:text-3xl flex-col">
+            <p>Projetos Fullstack</p>
+            <div className="rounded w-full h-[1px] bg-gradient-to-r from-sky-100/0 via-sky-300 to-sky-100/0" />
+          </div>
+          <div className="grid max-md:grid-cols-1 max-md:grid-rows-5 grid-cols-7 grid-rows-1 gap-4 px-4 w-full max-md:h-[80vh]">
+            <Link
+              href="https://e-commerce-rho-eosin.vercel.app/"
+              className="backdrop-blur-sm relative max-md:col-span-1 max-md:row-span-3 md:col-span-5 md:aspect-video cursor-pointer group overflow-hidden border rounded-lg flex items-start justify-center p-3 px-4 hover:p-0 transition-all duration-200 ease-linear hover:border-amber-100/20"
+            >
+              <Image
+                src="/mobile.png"
+                alt="Portfolio"
+                width={200}
+                height={200}
+                className="border rounded-xl mt-[30%] absolute group-hover:shadow-2xl shadow-amber-100/10 group-hover:mt-[25%] transition-all duration-300 ease-in-out"
+              />
+              <Image
+                src="/desktop.png"
+                alt="Portfolio"
+                width={1000}
+                height={1000}
+                className="border rounded-lg group-hover:border-0 transition-all duration-200 ease-in-out object-contain w-fit h-fit"
+              />
+              <div className="absolute top-0 left-0 h-full w-full flex p-4 px-3 group-hover:bg-black/5 transition-all duration-500 ease-in-out bg-gradient-to-b from-transparent to-black/95 from-65% gap-4 justify-between items-end backdrop-blur-[0.4px] group-hover:backdrop-blur-[0px]">
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-2 ">
+                    <div className="text-4xl group-hover:text-3xl transition-all duration-300 ease-in-out">
+                      <LuBox />
+                    </div>
+                    <p>sla store</p>
+                  </div>
+                  <p className="text-sm font-normal lowercase">
+                    E-commerce desenvolvido com Next.js e Prisma orm
+                  </p>
+                </div>
+                <FaArrowRightLong className="translate-x-10 group-hover:translate-x-0 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
+              </div>
+            </Link>
+            <Link
+              href="https://e-commerce-rho-eosin.vercel.app/"
+              className="backdrop-blur max-md:col-span-1 max-md:row-span-2 md:col-span-2 relative cursor-pointer group overflow-hidden border rounded-lg flex items-start justify-center p-3 px-4 hover:p-0 transition-all duration-200 ease-linear hover:shadow hover:border-amber-100/20"
+            >
+              <Image
+                src="/mobile.png"
+                alt="Portfolio"
+                width={200}
+                height={200}
+                className="border rounded-xl mt-[30%] absolute group-hover:shadow-2xl shadow-amber-100/10 group-hover:mt-[25%] transition-all duration-300 ease-in-out"
+              />
+              <Image
+                src="/desktop.png"
+                alt="Portfolio"
+                width={1000}
+                height={1000}
+                className="border rounded-lg group-hover:border-0 transition-all duration-200 ease-in-out object-contain w-fit h-fit group-hover:border-b"
+              />
+              <div className="absolute top-0 left-0 h-full w-full flex p-4 px-3 group-hover:bg-black/5 transition-all duration-500 ease-in-out bg-gradient-to-b from-transparent to-black/95 from-65% gap-4 justify-between items-end backdrop-blur-[0.4px] group-hover:backdrop-blur-[0px]">
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-2 ">
+                    <div className="text-4xl group-hover:text-3xl transition-all duration-300 ease-in-out">
+                      <LuBox />
+                    </div>
+                    <p>sla store</p>
+                  </div>
+                  <p className="text-sm font-normal lowercase">
+                    E-commerce desenvolvido com Next.js e Prisma orm
+                  </p>
+                </div>
+                <FaArrowRightLong className="translate-x-10 group-hover:translate-x-0 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className="w-full flex flex-col items-center justify-start relative bg-gradient-to-b from-transparent to-black/50 ">
+          <div className="flex flex-col items-center justify-center gap-2 px-4">
+            <HyperText>Apis</HyperText>
+            <p className="text-base font-normal lowercase text-white/90">
+              para facilitar a integração com diversos serviços.
+            </p>
+          </div>
+          <div className="w-full h-full flex max-md:flex-col items-center justify-center gap-4 max-w-[1200px] py-10 pb-20">
+            <div className="flex flex-col gap-4 items-start justify-start border hover:border-border/30 cursor-pointer rounded-lg bg-white/5 backdrop-blur-[1.5px] transition-all duration-300 ease-in-out group overflow-hidden">
+              <div className="h-[150px] w-full gap-6 bg-black/30 flex items-center justify-center text-5xl text-white/60 border-b">
+                <FaNodeJs />
+                <SiSequelize />
+                <SiJest />
+              </div>
+              <div className="p-4 pt-0 flex flex-col gap-2">
+                <h1>AluraFlix</h1>
+                <h2 className="text-sm font-normal lowercase">
+                  api para gerenciar videos, categorias e usuarios. <br />
+                  desenvolvida com express e sequelize.
+                </h2>
+                <div className="text-sm font-light lowercase flex flex-col text-white/50">
+                  <h3 className="font-semibold text-xl mb-2">
+                    principais rotas
+                  </h3>
+                  <p>/api/videos</p>
+                  <p>/api/categorias</p>
+                  <p>/api/usuarios</p>
+                </div>
+                <div className="text-xs lowercase flex items-center gap-2 text-white/50 font-light mt-2">
+                  <p className="transition-all group-hover:text-white">
+                    ver documentação
+                  </p>
+                  <div className="text-sm overflow-hidden">
+                    <FiArrowUpRight className="group-hover:animate-diagonalSlide animate-diagonalSlideReverse" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4 items-start justify-start border hover:border-border/30 cursor-pointer rounded-lg bg-white/5 backdrop-blur-[1.5px] transition-all duration-300 ease-in-out group overflow-hidden">
+              <div className="h-[150px] w-full gap-6 bg-black/30 flex items-center justify-center text-5xl text-white/60 border-b">
+                <FaNodeJs />
+                <SiSequelize />
+                <SiJest />
+              </div>
+              <div className="p-4 pt-0 flex flex-col gap-2">
+                <h1>AluraFlix</h1>
+                <h2 className="text-sm font-normal lowercase">
+                  api para gerenciar videos, categorias e usuarios. <br />
+                  desenvolvida com express e sequelize.
+                </h2>
+                <div className="text-sm font-light lowercase flex flex-col text-white/50">
+                  <h3 className="font-semibold text-xl mb-2">
+                    principais rotas
+                  </h3>
+                  <p>/api/videos</p>
+                  <p>/api/categorias</p>
+                  <p>/api/usuarios</p>
+                </div>
+                <div className="text-xs lowercase flex items-center gap-2 text-white/50 font-light mt-2">
+                  <p className="transition-all group-hover:text-white">
+                    ver documentação
+                  </p>
+                  <div className="text-sm overflow-hidden">
+                    <FiArrowUpRight className="group-hover:animate-diagonalSlide animate-diagonalSlideReverse" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
