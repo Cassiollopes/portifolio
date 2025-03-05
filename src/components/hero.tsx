@@ -22,7 +22,7 @@ const links = [
 
 export default function Hero() {
   return (
-    <div className="flex flex-col gap-10 h-[80vh] max-md:py-10 justify-center w-full md:items-center px-8">
+    <div className="flex flex-col gap-10 py-16 max-md:py-12 justify-center w-full md:items-center px-8">
       <div className="md:text-center flex flex-col gap-5 font-bold md:items-center">
         <div className="flex items-center gap-2">
           <Image
