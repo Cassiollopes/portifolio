@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BsFileEarmarkTextFill, BsGithub, BsLinkedin } from "react-icons/bs";
 
@@ -21,20 +22,28 @@ const links = [
 
 export default function Hero() {
   return (
-    <div className="bg-gradient-to-b from-indigo-900 to-transparent flex flex-col gap-10 h-[80vh] max-md:h-fit max-md:py-10 justify-center w-full md:items-center px-6">
-      <div className="md:text-center flex flex-col gap-5 font-bold">
-        <p className="opacity-85 text-lg uppercase">Ola 👋 eu sou Cassio</p>
-        <p className="text-9xl md:leading-[0.80] max-md:text-[3.5rem]">
+    <div className="flex flex-col gap-10 h-[80vh] max-md:py-10 justify-center w-full md:items-center px-8">
+      <div className="md:text-center flex flex-col gap-5 font-bold md:items-center">
+        <div className="flex items-center gap-2">
+          <Image
+            src="https://github.com/cassiollopes.png"
+            alt="Cassio"
+            width={40}
+            height={40}
+            className="rounded-full opacity-90"
+          />
+          <p className="opacity-85 text-lg">Ola 👋 eu sou Cassio</p>
+        </div>
+        <h1 className="text-9xl md:leading-[0.80] max-md:text-[3.5rem]">
           React <br />
           Developer
-        </p>
+        </h1>
       </div>
-      <p className="md:text-center">
-        Tenho 19 anos e sou estudante de programação, procuro minha primeira
-        <br /> oportunidade de emprego na área de
-        desenvolvimento de software.
+      <p className="md:text-center max-w-[500px] font-normal">
+        Tenho 19 anos, estou no terceiro semestre de faculdade e procuro minha
+        primeira oportunidade de estagio na área de desenvolvimento de software.
       </p>
-      <div className="flex gap-2 items-center justify-center max-md:flex-col">
+      <div className="flex gap-2 items-center justify-center max-md:flex-col max-md:gap-3">
         {links.map((link, i) => (
           <Link
             key={i}

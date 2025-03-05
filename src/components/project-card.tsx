@@ -7,7 +7,7 @@ export default function ProjectCard({ images, icon }: { images: string[], icon: 
   return (
     <Link
       href="https://e-commerce-rho-eosin.vercel.app/"
-      className="w-full h-full relative cursor-pointer overflow-hidden border rounded-xl flex items-start justify-center p-3 hover:p-0 transition-all duration-200 ease-in hover:border-amber-100/20 group"
+      className="bg-black/5 w-full h-full relative cursor-pointer overflow-hidden border rounded-xl flex items-start justify-center p-3 hover:p-0 transition-all duration-200 ease-in hover:border-amber-100/20 group"
     >
       <Image
         src={images[0]}
@@ -27,7 +27,7 @@ export default function ProjectCard({ images, icon }: { images: string[], icon: 
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2 uppercase">
             <div className="text-4xl">{icon}</div>
-            <p>sla store</p>
+            <h1>sla store</h1>
           </div>
           <p className="text-sm font-normal lowercase">
             E-commerce desenvolvido com Next.js e Prisma orm
