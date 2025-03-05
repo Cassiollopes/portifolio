@@ -25,19 +25,15 @@ export default function Home() {
             <h1>Projetos Fullstack</h1>
             <div className="rounded w-full h-[1px] bg-gradient-to-r from-sky-100/0 via-sky-300 to-sky-100/0" />
           </div>
-          <div className="grid max-md:grid-cols-1 max-md:grid-rows-7 grid-cols-7 grid-rows-1 gap-4 w-full max-md:h-[85vh] h-[60vh]">
-            <div className="md:col-span-4 max-md:row-span-4">
+          <div className="flex gap-6 max-md:flex-col">
               <ProjectCard
                 images={["/mobile.png", "/desktop.png"]}
                 icon={<LuBox />}
               />
-            </div>
-            <div className="md:col-span-3 max-md:row-span-3">
               <ProjectCard
                 images={["/mobile.png", "/desktop.png"]}
                 icon={<LuBox />}
               />
-            </div>
           </div>
         </div>
         <div className="w-full flex flex-col items-center justify-start relative gap-10 pb-20">

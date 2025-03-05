@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Safari } from "./magicui/safari";
 
 export default function ProjectCard({ images, icon }: { images: string[], icon: ReactNode }) {
   return (
     <Link
       href="https://e-commerce-rho-eosin.vercel.app/"
-      className="bg-black/5 w-full h-full relative cursor-pointer overflow-hidden border rounded-xl flex items-start justify-center p-3 hover:p-0 transition-all duration-200 ease-in hover:border-amber-100/20 group"
+      className="bg-black/5 w-full h-full relative cursor-pointer overflow-hidden border rounded-md flex items-start justify-center group"
     >
       <Image
         src={images[0]}
@@ -16,13 +17,7 @@ export default function ProjectCard({ images, icon }: { images: string[], icon: 
         height={200}
         className="border rounded-xl mt-[30%] absolute group-hover:mt-[25%] transition-all duration-300 ease-in-out"
       />
-      <Image
-        src={images[1]}
-        alt="Portfolio"
-        width={1000}
-        height={1000}
-        className="border rounded-lg object-contain w-fit h-fit"
-      />
+      <Safari className="size-full" url="https://e-commerce-rho-eosin.vercel.app/" imageSrc="/desktop.png" mode="simple"/>
       <div className="absolute top-0 left-0 h-full w-full flex p-4 bg-gradient-to-b from-transparent to-black/95 from-60% gap-4 justify-between items-end">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2 uppercase">

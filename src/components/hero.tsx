@@ -43,13 +43,13 @@ export default function Hero() {
         Tenho 19 anos, estou no terceiro semestre de faculdade e procuro minha
         primeira oportunidade de estagio na área de desenvolvimento de software.
       </p>
-      <div className="flex gap-2 items-center justify-center max-md:flex-col max-md:gap-3">
+      <div className="flex gap-3 items-center justify-center max-md:flex-col">
         {links.map((link, i) => (
           <Link
             key={i}
             href={link.link}
             target="_blank"
-            className="gap-1 p-2 px-4 border rounded-lg text-white/50 hover:text-white transition-all duration-200 ease-in-out flex items-center bg-white/[0.015] hover:bg-white/10 max-md:w-full justify-center text-base"
+            className="gap-1 p-2 px-4 border rounded-sm text-white/50 hover:text-white transition-all duration-200 ease-in-out flex items-center bg-white/[0.025] hover:bg-white/10 max-md:w-full justify-center text-base"
           >
             <div>{link.icon}</div>
             {link.name}
