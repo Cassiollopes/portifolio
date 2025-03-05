@@ -21,15 +21,15 @@ const links = [
 
 export default function Hero() {
   return (
-    <div className="bg-gradient-to-b from-slate-900 from-10% to-transparent flex flex-col gap-6 h-[80vh] max-md:h-fit max-md:py-10 justify-center w-full md:items-center px-6">
-      <div className="md:text-center flex flex-col gap-2 font-bold">
-        <p className="text-xl opacity-60 font-black max-md:text-lg">Ola 👋 eu sou Cassio</p>
-        <p className="text-9xl leading-[0.85] max-md:text-5xl">
+    <div className="bg-gradient-to-b from-indigo-900 to-transparent flex flex-col gap-10 h-[80vh] max-md:h-fit max-md:py-10 justify-center w-full md:items-center px-6">
+      <div className="md:text-center flex flex-col gap-5 font-bold">
+        <p className="opacity-85 text-lg uppercase">Ola 👋 eu sou Cassio</p>
+        <p className="text-9xl md:leading-[0.80] max-md:text-[3.5rem]">
           React <br />
           Developer
         </p>
       </div>
-      <p className="text-sm md:text-center">
+      <p className="md:text-center">
         Tenho 19 anos e sou estudante de programação, procuro minha primeira
         <br /> oportunidade de emprego na área de
         desenvolvimento de software.

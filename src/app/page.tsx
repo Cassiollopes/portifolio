@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div
       className="text-white bg-black/95
-    flex uppercase items-center justify-start flex-col min-h-screen font-[family-name:var(--font-geist-sans)] overflow-hidden"
+    flex items-center justify-start flex-col min-h-screen font-[family-name:var(--font-geist-sans)] overflow-hidden"
     >
       <Hero />
       <div className="flex flex-col text-2xl font-bold items-center w-full gap-12 relative pt-4 max-w-[1200px] px-5">
@@ -22,9 +22,9 @@ export default function Home() {
           )}
         />
         <div className="flex flex-col gap-10 items-center">
-          <div className="w-fit md:text-3xl flex-col">
+          <div className="w-fit md:text-3xl flex-col uppercase">
             <p>Projetos Fullstack</p>
-            <div className="rounded w-full h-[1px] bg-gradient-to-r from-sky-100/0 via-sky-300 to-sky-100/0" />
+            <div className="rounded w-full h-[1px] bg-gradient-to-r from-sky-100/0 via-indigo-400 to-sky-100/0" />
           </div>
           <div className="grid max-md:grid-cols-1 max-md:grid-rows-7 grid-cols-7 grid-rows-1 gap-4 w-full max-md:h-[85vh] h-[60vh]">
             <div className="md:col-span-4 max-md:row-span-4">

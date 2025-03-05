@@ -25,10 +25,8 @@ export default function ProjectCard({ images, icon }: { images: string[], icon: 
       />
       <div className="absolute top-0 left-0 h-full w-full flex p-4 bg-gradient-to-b from-transparent to-black/95 from-60% gap-4 justify-between items-end">
         <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 ">
-            <div className="text-4xl">
-              {icon}
-            </div>
+          <div className="flex items-center gap-2 uppercase">
+            <div className="text-4xl">{icon}</div>
             <p>sla store</p>
           </div>
           <p className="text-sm font-normal lowercase">

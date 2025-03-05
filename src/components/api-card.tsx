@@ -22,7 +22,7 @@ export default function ApiCard({
         {icons.map((Icon) => Icon)}
       </div>
       <div className="p-4 pt-0 flex flex-col gap-2">
-        <h1>{title}</h1>
+        <h1 className="uppercase">{title}</h1>
         <h2 className="text-sm font-normal lowercase">{description}</h2>
         <div className="text-sm font-light lowercase flex flex-col text-white/50">
           <h3 className="font-semibold text-xl mb-2">principais rotas</h3>
