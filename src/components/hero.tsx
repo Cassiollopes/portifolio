@@ -49,7 +49,7 @@ export default function Hero() {
             key={i}
             href={link.link}
             target="_blank"
-            className="lowercase gap-1 p-2 px-4 border rounded-lg text-white/50 hover:text-white transition-all duration-200 ease-in-out flex items-center bg-white/[0.015] hover:bg-white/10 max-md:w-full justify-center"
+            className="gap-1 p-2 px-4 border rounded-lg text-white/50 hover:text-white transition-all duration-200 ease-in-out flex items-center bg-white/[0.015] hover:bg-white/10 max-md:w-full justify-center text-base"
           >
             <div>{link.icon}</div>
             {link.name}
