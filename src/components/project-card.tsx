@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { BsGlobe } from "react-icons/bs";
 import { FaArrowRightLong, FaGlobe } from "react-icons/fa6";
-import { FiGlobe } from "react-icons/fi";
+
+type technologies = {
+  label: string;
+  icon: ReactNode;
+};
 
 export default function ProjectCard({
   images,
@@ -14,7 +17,7 @@ export default function ProjectCard({
 }: {
   images: string[];
   icon: ReactNode;
-  technologies: ReactNode[];
+  technologies: technologies[];
   description: string;
   title: string;
 }) {
@@ -53,10 +56,10 @@ export default function ProjectCard({
           {technologies.map((tech, i) => (
             <div
               key={i}
-              className="p-1 px-3 bg-white/10 rounded-md text-xs flex gap-1 items-center font-normal"
+              className="lowercase p-1 px-3 bg-white/10 rounded-md text-xs flex gap-1 items-center font-normal"
             >
-              {tech}
-              {tech.key}
+              {tech.icon}
+              {tech.label}
             </div>
           ))}
         </div>

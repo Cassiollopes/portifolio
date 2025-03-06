@@ -7,7 +7,13 @@ import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa6";
 import { LuBox } from "react-icons/lu";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiJest, SiPrisma, SiRailway, SiSequelize, SiShadcnui } from "react-icons/si";
+import {
+  SiJest,
+  SiPrisma,
+  SiRailway,
+  SiSequelize,
+  SiShadcnui,
+} from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
 export default function Home() {
@@ -35,14 +41,14 @@ export default function Home() {
               images={["/mobile.png", "/desktop.png"]}
               icon={<LuBox />}
               technologies={[
-                <RiNextjsFill key="next.js" />,
-                <BiLogoTypescript key="typescript" />,
-                <RiTailwindCssFill key="tailwind" />,
-                <SiShadcnui key="shadcnui" />,
-                <SiPrisma key="prisma" />,
-                <SiRailway key="railway" />,
-                <BiLogoPostgresql key="postgresql" />,
-                <TbBrandFramerMotion key="framer-motion" />,
+                { label: "Next.js", icon: <RiNextjsFill /> },
+                { label: "TypeScript", icon: <BiLogoTypescript /> },
+                { label: "Tailwind", icon: <RiTailwindCssFill /> },
+                { label: "ShadcnUI", icon: <SiShadcnui /> },
+                { label: "Prisma", icon: <SiPrisma /> },
+                { label: "Railway", icon: <SiRailway /> },
+                { label: "PostgreSQL", icon: <BiLogoPostgresql /> },
+                { label: "Framer Motion", icon: <TbBrandFramerMotion /> },
               ]}
             />
             <ProjectCard
@@ -51,9 +57,14 @@ export default function Home() {
               images={["/mobile.png", "/desktop.png"]}
               icon={<LuBox />}
               technologies={[
-                <SiSequelize key="sequelize" />,
-                <FaNodeJs key="nodejs" />,
-                <SiJest key="jest" />,
+                { label: "Next.js", icon: <RiNextjsFill /> },
+                { label: "TypeScript", icon: <BiLogoTypescript /> },
+                { label: "Tailwind", icon: <RiTailwindCssFill /> },
+                { label: "ShadcnUI", icon: <SiShadcnui /> },
+                { label: "Prisma", icon: <SiPrisma /> },
+                { label: "Railway", icon: <SiRailway /> },
+                { label: "PostgreSQL", icon: <BiLogoPostgresql /> },
+                { label: "Framer Motion", icon: <TbBrandFramerMotion /> },
               ]}
             />
           </div>
