@@ -63,7 +63,7 @@ export default function ProjectCard({
           quality={100}
         />
       </Link>
-      <div className="h-full w-full flex pt-3 px-5 pb-6 justify-between flex-col gap-3 backdrop-blur-sm">
+      <div className="h-full w-full flex pt-3 px-5 pb-6 justify-between flex-col gap-3">
         <div className="flex items-center gap-3 uppercase">
           <div className="text-3xl">{icon}</div>
           <h1 className="text-xl">{title}</h1>
