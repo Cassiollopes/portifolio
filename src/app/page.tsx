@@ -3,14 +3,17 @@ import Hero from "@/components/hero";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import ProjectCard from "@/components/project-card";
 import { cn } from "@/lib/utils";
+import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa6";
 import { LuBox } from "react-icons/lu";
-import { SiJest, SiSequelize } from "react-icons/si";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiJest, SiPrisma, SiRailway, SiSequelize, SiShadcnui } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 export default function Home() {
   return (
     <div
-      className="text-white/90
+      className="text-white/95
     flex items-center justify-start flex-col min-h-screen overflow-hidden"
     >
       <Hero />
@@ -25,15 +28,34 @@ export default function Home() {
             <h1>Projetos Fullstack</h1>
             <div className="rounded w-full h-[1px] bg-gradient-to-r from-sky-100/0 via-sky-300 to-sky-100/0" />
           </div>
-          <div className="flex gap-6 max-md:flex-col">
-              <ProjectCard
-                images={["/mobile.png", "/desktop.png"]}
-                icon={<LuBox />}
-              />
-              <ProjectCard
-                images={["/mobile.png", "/desktop.png"]}
-                icon={<LuBox />}
-              />
+          <div className="flex gap-4 max-md:flex-col max-w-[600px]">
+            <ProjectCard
+              title="sla store"
+              description="E-commerce com carrinho de compras e autenticação de usuários. Inclui um dashboard para o gerenciamento de vendas."
+              images={["/mobile.png", "/desktop.png"]}
+              icon={<LuBox />}
+              technologies={[
+                <RiNextjsFill key="next.js" />,
+                <BiLogoTypescript key="typescript" />,
+                <RiTailwindCssFill key="tailwind" />,
+                <SiShadcnui key="shadcnui" />,
+                <SiPrisma key="prisma" />,
+                <SiRailway key="railway" />,
+                <BiLogoPostgresql key="postgresql" />,
+                <TbBrandFramerMotion key="framer-motion" />,
+              ]}
+            />
+            <ProjectCard
+              title="AluraFlix"
+              description="Plataforma de videos com categorias e usuarios."
+              images={["/mobile.png", "/desktop.png"]}
+              icon={<LuBox />}
+              technologies={[
+                <SiSequelize key="sequelize" />,
+                <FaNodeJs key="nodejs" />,
+                <SiJest key="jest" />,
+              ]}
+            />
           </div>
         </div>
         <div className="w-full flex flex-col items-center justify-start relative gap-10 pb-20">
