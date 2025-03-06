@@ -23,19 +23,21 @@ export default function Home() {
     flex items-center justify-start flex-col min-h-screen overflow-hidden"
     >
       <Hero />
-      <div className="flex flex-col text-2xl font-bold items-center w-full gap-12 relative pt-4 max-w-[1200px] px-5">
+      <div className="flex flex-col text-2xl font-bold items-center w-full gap-12 relative pt-4 max-w-[640px] md:px-5">
         <DotPattern
           className={cn(
             "[mask-image:radial-gradient(700_circle_at_center,white,transparent)] opacity-5"
           )}
         />
-        <div className="flex flex-col gap-10 items-center">
+        <div className="flex flex-col gap-10 items-center max-md:px-5">
           <div className="w-fit md:text-3xl flex-col uppercase">
             <h1>Projetos Fullstack</h1>
             <div className="rounded w-full h-[1px] bg-gradient-to-r from-sky-100/0 via-sky-300 to-sky-100/0" />
           </div>
-          <div className="flex gap-4 max-md:flex-col max-w-[600px]">
+          <div className="flex gap-4 max-md:flex-col">
             <ProjectCard
+              link="https://e-commerce-rho-eosin.vercel.app/"
+              sourceLink="https://github.com/cassiollopes/e-commerce"
               title="sla store"
               description="E-commerce com carrinho de compras e autenticação de usuários. Inclui um dashboard para o gerenciamento de vendas."
               images={["/mobile.png", "/desktop.png"]}
@@ -52,6 +54,8 @@ export default function Home() {
               ]}
             />
             <ProjectCard
+              link="https://aluraflix.vercel.app/"
+              sourceLink="https://github.com/cassiollopes/aluraflix"
               title="AluraFlix"
               description="Plataforma de videos com categorias e usuarios."
               images={["/mobile.png", "/desktop.png"]}
@@ -70,35 +74,47 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full flex flex-col items-center justify-start relative gap-10 pb-20">
-          <div className="flex flex-col items-center justify-center gap-2">
+          <div className="flex flex-col items-center justify-center gap-2 max-md:px-5">
             <h1 className="uppercase md:text-3xl">Apis</h1>
             <h2 className="text-base font-normal lowercase text-white/90 text-center">
               para facilitar a integração com diversos serviços.
             </h2>
           </div>
-          <div className="flex gap-6 max-md:flex-col">
-            <ApiCard
-              icons={[
-                <FaNodeJs key="nodejs" />,
-                <SiSequelize key="sequelize" />,
-                <SiJest key="jest" />,
-              ]}
-              description="api para gerenciar videos, categorias e usuarios.
-                desenvolvida com express e sequelize."
-              link=""
-              title="AluraFlix"
-            />
-            <ApiCard
-              icons={[
-                <FaNodeJs key="nodejs" />,
-                <SiSequelize key="sequelize" />,
-                <SiJest key="jest" />,
-              ]}
-              description="api para gerenciar videos, categorias e usuarios.
-                desenvolvida com express e sequelize."
-              link=""
-              title="AluraFlix"
-            />
+          <div
+            className="flex gap-4 max-md:overflow-x-scroll max-md:w-full max-md:flex-nowrap max-md:px-5 scroll-smooth"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              scrollSnapType: "x mandatory",
+            }}
+          >
+            <div style={{ scrollSnapAlign: "center" }}>
+              <ApiCard
+                icons={[
+                  <FaNodeJs key="nodejs" />,
+                  <SiSequelize key="sequelize" />,
+                  <SiJest key="jest" />,
+                ]}
+                description="api para gerenciar videos, categorias e usuarios.
+        desenvolvida com express e sequelize."
+                link=""
+                title="AluraFlix"
+              />
+            </div>
+
+            <div style={{ scrollSnapAlign: "center" }}>
+              <ApiCard
+                icons={[
+                  <FaNodeJs key="nodejs" />,
+                  <SiSequelize key="sequelize" />,
+                  <SiJest key="jest" />,
+                ]}
+                description="api para gerenciar videos, categorias e usuarios.
+        desenvolvida com express e sequelize."
+                link=""
+                title="AluraFlix"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function ApiCard({
   return (
     <Link
       href={link}
-      className="w-full max-w-[350px] h-full flex flex-col gap-4 items-start justify-start border hover:border-border/30 cursor-pointer rounded-xl bg-white/5 backdrop-blur-[1.5px] transition-all duration-200 ease-in-out group overflow-hidden"
+      className="w-full max-md:min-w-[80vw] h-full flex flex-col gap-4 items-start justify-start border hover:border-border/30 cursor-pointer rounded-md bg-white/5 backdrop-blur-[1.5px] transition-all duration-200 ease-in-out group overflow-hidden"
     >
       <div className="h-[150px] w-full gap-6 bg-black/30 flex items-center justify-center text-5xl text-white/60 border-b">
         {icons.map((Icon) => Icon)}

@@ -1,12 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { FaArrowRightLong, FaGlobe } from "react-icons/fa6";
+import { BsGithub } from "react-icons/bs";
+import { FaGlobe } from "react-icons/fa6";
 
 type technologies = {
   label: string;
   icon: ReactNode;
 };
+
+const cardOptions = [
+  {
+    label: "Website",
+    icon: <FaGlobe />,
+  },
+  {
+    label: "Codigo",
+    icon: <BsGithub />,
+  },
+];
 
 export default function ProjectCard({
   images,
@@ -14,19 +26,22 @@ export default function ProjectCard({
   technologies,
   description,
   title,
+  link,
+  sourceLink,
 }: {
   images: string[];
   icon: ReactNode;
   technologies: technologies[];
   description: string;
   title: string;
+  link: string;
+  sourceLink: string;
 }) {
   return (
-    <Link
-      href="https://e-commerce-rho-eosin.vercel.app/"
-      className="bg-black/5 w-full h-full relative cursor-pointer overflow-hidden border rounded-lg flex items-start justify-center group flex-col  hover:border-white/20 transition-all duration-200 ease-in"
+    <div
+      className="bg-black/5 w-full h-full relative overflow-hidden border rounded-md flex items-start justify-center group flex-col hover:border-white/20 transition-all duration-200 ease-in"
     >
-      <div className="flex h-fit relative overflow-hidden w-full justify-center border-b">
+      <Link href={link} className="flex h-fit relative overflow-hidden w-full justify-center border-b">
         <Image
           src={images[0]}
           alt="Portfolio"
@@ -41,22 +56,20 @@ export default function ProjectCard({
           height={200}
           className="w-full h-fit object-contain"
         />
-      </div>
-      <div className="h-full w-full flex p-3 gap-3 justify-between flex-col">
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 uppercase">
-            <div className="text-3xl">{icon}</div>
-            <h1 className="text-xl">{title}</h1>
-          </div>
-          <p className="text-sm max-md:text-base font-normal text-white/70">
-            {description}
-          </p>
+      </Link>
+      <div className="h-full w-full flex p-4 px-5 pb-6 justify-between flex-col gap-3 backdrop-blur-md">
+        <div className="flex items-center gap-3 uppercase">
+          <div className="text-3xl">{icon}</div>
+          <h1 className="text-xl">{title}</h1>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <p className="text-sm max-md:text-base font-light text-white/65">
+          {description}
+        </p>
+        <div className="flex flex-wrap gap-2 py-1">
           {technologies.map((tech, i) => (
             <div
               key={i}
-              className="lowercase p-1 px-3 bg-white/10 rounded-md text-xs flex gap-1 items-center font-normal"
+              className="lowercase p-0.5 px-2 bg-white/10 rounded-sm text-xs flex gap-1 items-center font-light max-md:text-sm"
             >
               {tech.icon}
               {tech.label}
@@ -64,13 +77,20 @@ export default function ProjectCard({
           ))}
         </div>
         <div className="flex items-center gap-2 w-full justify-between">
-          <div className="flex items-center gap-1 text-xs font-light text-black bg-white/90 p-1 px-3 rounded-md group">
-            <FaGlobe />
-            <h1>Visitar website</h1>
+          <div className="flex items-center gap-2">
+            {cardOptions.map((option, i) => (
+              <Link
+                href={option.label === "Website" ? link : sourceLink}
+                key={i}
+                className="flex items-center gap-1 text-xs max-md:text-sm font-normal text-black bg-white/95 p-1 px-3 rounded-sm group ring-[1.5px] ring-white/50 hover:opacity-50 transition-all duration-200 ease-in-out cursor-pointer"
+              >
+                {option.icon}
+                <h1>{option.label}</h1>
+              </Link>
+            ))}
           </div>
-          <FaArrowRightLong className="translate-x-10 group-hover:translate-x-0 transition-all duration-200 ease-in opacity-0 group-hover:opacity-100 text-xl" />
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
