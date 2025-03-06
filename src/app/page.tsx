@@ -74,11 +74,8 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full flex flex-col items-center justify-start relative gap-10 pb-20">
-          <div className="flex flex-col items-center justify-center gap-2 max-md:px-5">
+          <div className="flex flex-col items-center justify-center max-md:px-5">
             <h1 className="uppercase md:text-3xl">Apis</h1>
-            <h2 className="text-base font-normal lowercase text-white/90 text-center">
-              para facilitar a integração com diversos serviços.
-            </h2>
           </div>
           <div
             className="flex gap-4 max-md:overflow-x-scroll max-md:w-full max-md:flex-nowrap max-md:px-5 scroll-smooth"
