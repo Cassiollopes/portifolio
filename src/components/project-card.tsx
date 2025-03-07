@@ -38,7 +38,10 @@ export default function ProjectCard({
   sourceLink: string;
 }) {
   return (
-    <div className="bg-black/5 w-full h-full relative overflow-hidden border rounded-xl flex items-start justify-start group flex-col hover:border-white/20 transition-all duration-200 ease-in max-md:min-w-[88vw] max-w-[350px]" style={{ scrollSnapAlign: "center" }}>
+    <div
+      className="bg-black/5 w-full h-full relative overflow-hidden border rounded-md flex items-start justify-start group flex-col hover:border-white/20 transition-all duration-200 ease-in max-md:min-w-[88vw] max-w-[350px]"
+      style={{ scrollSnapAlign: "center" }}
+    >
       <Link
         href={link}
         target="_blank"
@@ -68,14 +71,14 @@ export default function ProjectCard({
           <div className="text-3xl">{icon}</div>
           <h1 className="text-xl">{title}</h1>
         </div>
-        <p className="text-sm max-md:text-base font-normal text-white/70">
+        <p className="text-sm max-md:text-base font-normal text-white/60">
           {description}
         </p>
         <div className="flex flex-wrap gap-2 py-1">
           {technologies.map((tech, i) => (
             <div
               key={i}
-              className="lowercase p-0.5 px-2 bg-white/10 rounded-sm text-xs flex gap-1 items-center font-light max-md:text-sm"
+              className="lowercase p-0.5 px-2 bg-white/10 rounded-xs text-xs flex gap-1 items-center font-light max-md:text-sm"
             >
               {tech.icon}
               {tech.label}

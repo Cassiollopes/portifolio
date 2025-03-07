@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsFileEarmarkTextFill, BsGithub, BsLinkedin } from "react-icons/bs";
 
-const links = [
+export const links = [
   {
     icon: <BsLinkedin />,
     link: "https://www.linkedin.com/in/c%C3%A1ssio-eduardo-a3b7012a8/",
@@ -22,7 +22,7 @@ const links = [
 
 export default function Hero() {
   return (
-    <div className="flex flex-col max-md:gap-5 gap-8 py-28 pb-24 max-md:py-20 max-md:pb-16 justify-center w-full items-center px-6">
+    <div className="flex flex-col max-md:gap-5 gap-8 py-24 pb-20 max-md:py-20 max-md:pb-16 justify-center w-full items-center px-6">
       <div className="md:text-center flex flex-col max-md:gap-2 font-semibold items-center">
         <div className="flex items-center gap-2">
           <Image
@@ -33,7 +33,7 @@ export default function Hero() {
             className="rounded-full opacity-90 max-md:size-8 ring-[1.5px] ring-sky-300"
           />
           <p className="opacity-85 text-lg max-md:text-base">
-            Ola 👋 eu sou Cassio
+            Olá 👋 eu sou Cassio
           </p>
         </div>
         <h1 className="text-9xl leading-[0.80] max-md:text-[4rem] text-center">
@@ -53,7 +53,7 @@ export default function Hero() {
             href={link.link}
             target="_blank"
             className={`gap-1 p-2 px-4 border rounded-sm text-white/50 hover:text-white transition-all duration-200 ease-in-out flex items-center bg-white/[0.02] hover:bg-white/10  justify-center text-base md:w-[125px] ${
-              i === 1 && "max-sm:hidden"
+              i === 0 && "max-sm:hidden"
             } max-md:text-[15px] text-sm max-md:font-semibold`}
           >
             <div>{link.icon}</div>
