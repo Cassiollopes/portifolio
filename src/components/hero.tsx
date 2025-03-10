@@ -42,7 +42,7 @@ export default function Hero() {
           Developer
         </h1>
       </div>
-      <p className="text-center max-w-[600px] font-normal max-md:max-w-[380px] text-white/70 max-md:text-[15px] max-md:font-semibold">
+      <p className="text-center max-w-[600px] font-normal max-md:max-w-[380px] opacity-70 max-md:text-[15px] max-md:font-semibold">
         Tenho 19 anos, estou no terceiro semestre da faculdade e procuro uma
         oportunidade de estágio na área de desenvolvimento de software.
       </p>
@@ -52,7 +52,7 @@ export default function Hero() {
             key={i}
             href={link.link}
             target="_blank"
-            className={`gap-1 p-2 px-4 border rounded-sm text-white/50 hover:text-white transition-all duration-200 ease-in-out flex items-center bg-white/[0.02] hover:bg-white/10  justify-center text-base md:w-[125px] ${
+            className={`gap-1 p-2 px-4 border rounded-sm text-black/50 dark:text-white/50 dark:hover:text-white hover:text-black/60 transition-all duration-200 ease-in-out flex items-center bg-black/[0.02] dark:bg-white/[0.02] dark:hover:bg-white/10 hover:bg-black/10 justify-center text-base md:w-[125px] ${
               i === 0 && "max-sm:hidden"
             } max-md:text-[15px] text-sm max-md:font-semibold`}
           >

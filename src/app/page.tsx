@@ -26,7 +26,8 @@ const skills = [
     icon: <BiLogoPostgresql />,
   },
   {
-    name: "Nextjs", icon: <RiNextjsFill />,
+    name: "Nextjs",
+    icon: <RiNextjsFill />,
   },
   {
     name: "Framer Motion",
@@ -39,14 +40,13 @@ const skills = [
   {
     name: "Railway",
     icon: <SiRailway />,
-  }
+  },
 ];
 
 export default function Home() {
   return (
     <div
-      className="text-white/95
-    flex items-center justify-start flex-col min-h-screen overflow-hidden pb-20 scroll-smooth"
+      className="flex items-center justify-start flex-col min-h-screen overflow-hidden pb-20 scroll-smooth"
     >
       <Hero />
       <div className="flex flex-col text-2xl font-bold items-center w-full gap-16 max-w-[640px] md:px-5">
@@ -57,7 +57,7 @@ export default function Home() {
               {skills.map((skill, i) => (
                 <div
                   key={i}
-                  className="flex gap-2 items-center opacity-50 text-base bg-white/5 p-1 px-2 rounded-sm font-normal"
+                  className="flex gap-2 items-center opacity-50 text-base bg-black/10 dark:bg-white/5 p-1 px-2 rounded-sm font-normal"
                 >
                   {skill.icon}
                   <p>{skill.name}</p>
